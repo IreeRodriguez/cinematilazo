@@ -1,8 +1,36 @@
-$(function(){
+$( document ).ready(function() {
+
+  $('#recommended').hide();
+  $('#slide').hide();
+  $('#profileUser').hide();
+  $('.userHeader').hide();
+  $('footer').hide();
+
+
    setTimeout(function() {
       $('#splash').fadeOut(800);
    }, 2500);
+
+    
 });
+
+function ingreso(){
+  
+  $('.joinHeader').hide();
+  $('.registry').hide();
+  $('.userHeader').show();
+  $('#recommended').show();
+  $('#slide').show();
+  $('#profileUser').show();
+  $('#userHeader').show();
+  $('footer').show();
+   
+
+};
+$('.smallLogo').click(function(){
+  
+  ingreso();
+})
 
 function search(input) {
 
