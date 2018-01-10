@@ -16,7 +16,11 @@ h3{
     text-align: center;
 }
 
-a{
+a, h4{
+    color: #00cdab;
+}
+
+.greenTitle{
     color: #00cdab;
 }
 
@@ -28,7 +32,6 @@ a{
     width:100%;
     background-color:#363535;
     z-index: 100;
-    font-family: 'Spicy Rice', cursive;
     color: #b0abaa;
     font-size: 20vh;
 }
@@ -38,19 +41,19 @@ a{
 
 /*Nav inicio*/
 .joinHeader{
-    display:none;
+    display:;
 }
 
 .smallLogo{
     width: 230px;
-    margin-top: -1.8em;
-    margin-left: -5em;
+    margin-top: -0.9em;
+    margin-left: -4em;
 }
 
 /*Inicio sin registro*/
 
 .registry{
-    display: none;
+    display: ;
 }
 
 img.loginLogo{
@@ -86,27 +89,25 @@ button.btnStyle:hover {
 }
 
 /*consu, seccion slide y recommended*/
-  .container--head {
-    background: #a090a5;
+.container--head {
+    background: #74787b;
   }
 
-  .tooltip-carousel {
+.tooltip-carousel {
     position: absolute;
     z-index: 11;
     border-radius: 50%;
   }
 
-  .caraousel-tooltip-item {
+.caraousel-tooltip-item {
     display: none;
   }
 
-  .caraousel-tooltip-item.active {
+.caraousel-tooltip-item.active {
     display: block;
   }
 .carousel-caption {
     color: #fff;
-    font-family: 'Spicy Rice', cursive;
-    font-size: 10vh;
 }
 
 .carousel-inner>.item>img {
@@ -114,39 +115,32 @@ button.btnStyle:hover {
     padding: 1vh;
 }
 
-img{
-  display:block;
-  margin:auto;
-
+.sliderHead img{
+    display:block;
+    margin:auto;
 }
-.titleCarrousel{
-  font-family: 'Spicy Rice', cursive;
 
-}
 .titleCategories{
-  text-align: center;
-  font-family: 'Spicy Rice', cursive;
+    color: #00cdab;
+    text-align: center;
 }
 /*carrusel hasta aca*/
 #recommended{
-  text-align: center;
-  /*font-family: 'Spicy Rice', cursive;*/
+    text-align: center;
 }
 .opinion{
-  color:white;
+    color:white;
 }
-.logo{
-  font-family: 'Spicy Rice', cursive;
-}
+
 .mobilRecommended{
-  color: white;
+    color: white;
 }
 
 /*consu, seccion slide y recommended*/
 
 
 button.loginBtn{
-   background: #00cdab;
+    background: #00cdab;
 }
 
 button.googleBtn{
@@ -187,7 +181,7 @@ input.transparentInput {
 }
 
 .profile-image{
-  width: 25px;
+    width: 25px;
 }
 
 /*Perfil usuario*/
@@ -272,4 +266,3 @@ input.transparentInput {
 button.btn-info{
    background: #00cdab;
 }
-Perfil usuario
