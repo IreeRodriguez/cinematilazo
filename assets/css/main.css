@@ -266,3 +266,12 @@ input.transparentInput {
 button.btn-info{
    background: #00cdab;
 }
+
+footer{
+  background: #333;
+  color:white;
+  height: 10%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
