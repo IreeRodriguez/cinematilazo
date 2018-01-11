@@ -53,10 +53,6 @@ a, h4{
 
 /*Inicio sin registro*/
 
-.registry{
-    display: ;
-}
-
 img.loginLogo{
     display: block;
     margin-left: auto;
@@ -65,13 +61,20 @@ img.loginLogo{
 
 .login{
     background-color:transparent;
-    width: 40em;
     padding-left: 5em;
     padding-right: 5em;
     padding-bottom: 3em;
-    border-radius: 5px;
-    margin-left: 25em;
     border: 1px solid #00cdab;
+}
+
+.backgroundModal{
+    background-image: url(../images/footer_lodyas.png);
+    border-radius: 5px;
+}
+
+.joinLogo{
+    text-align: center;
+    color: white;
 }
 
 button.btnStyle{
@@ -229,12 +232,7 @@ input.transparentInput {
     padding-bottom: 0;
 }
 
-.user-details {
-    min-height: 333px;
-}
-
 .user-image {
-    max-height:200px;
     overflow:hidden;
 }
 
@@ -270,7 +268,7 @@ button.btn-info{
 }
 
 footer{
-  background: #333;
+  background: #2d2d2d;
   color:white;
   height: 10%;
   text-align: center;

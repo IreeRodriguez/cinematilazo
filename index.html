@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -19,6 +20,26 @@
         <h3>Tu opinión es nuestra Influencia</h3>
     </center>
 </div>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Cinematízalo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/js/app.js">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+<!---Splash------------------------------>
+      <div id="splash">
+          <center>
+              <img src="assets/images/logoSplash.png" class="camera">
+          </center>
+      </div>
+
 
 <!---Nav inicio------------------------------->
 <!-- <header class="joinHeader">
@@ -47,6 +68,7 @@
 </nav>
 </header> -->
 <!--Fin Nav usuario------->
+
 
 <!--Sección registro------>
 <!-- <div class="registry">
@@ -103,6 +125,104 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
+<!--Modal-registro-->
+      <div class="modal fade login" id="modalJoin">
+          <div class="modal-dialog backgroundModal">
+              <div class="modal-content backgroundModal">
+                  <div class="modal-header">
+                      <button type="button" class="close btn-black" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  </div>
+                  <div class="modal-body ">
+                      <h1 class="joinLogo">Únete a<span><img src="assets/images/logo2.png"></span></h1>
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Nombre de usuario</label>
+                          <input id="name-user-user" type="email" class="form-control transparentInput" placeholder="Username">
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Correo Electrónico</label>
+                          <input type="email" class="form-control transparentInput" id="email2" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Contraseña</label>
+                          <input type="password" class="form-control transparentInput" id="password2" placeholder="Password">
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="col-lg-6">
+                                  <button class="btn btn-default loginBtn btnStyle btn-block" type="submit" onclick="ingreso()"><strong>Entrar</strong></button>
+                              </div>
+                              <div class="col-lg-6">
+                                  <p><a href="#">¿Olvidaste tu nombre de usuario o tu contraseña?</a></p>
+                              </div>
+                          </div>
+                          <p class="or">— O con —</p>
+                          <div class="col-lg-12">
+                              <div class="col-lg-6">
+                                  <button class="btn btn-default googleBtn btnStyle btn-block" type="submit" onclick="ingreso()"><span class="icon fa fa-google"></span><strong>Google</strong></button>
+                              </div>
+                              <div class="col-lg-6">
+                                    <button class="btn btn-default facebookBtn btnStyle btn-block" type="submit" onclick="ingreso()"><span class="icon fa fa-facebook"></span><strong>Facebook</strong></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+<!--Fin Modal-registro-->
+
+<!--Nav usuario------->
+      <header class="userHeader">
+          <nav class="navbar navbar-inverse no-margin">
+              <div class="container">
+                  <div class="navbar-header">
+                      <div class="navbar-header">
+                          <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                      </div>
+                      <a class="navbar-brand" href="#"><img class="smallLogo"src="assets/images/logo2.png"></a>
+                      <div class="input-group inputSearch">
+                           <input type="text" class="form-control transparentInput searchInput" id="userTitle" placeholder="Buscar serie o película...">
+                           <div class="input-group-addon searchIcon"><span id="search"  class="glyphicon glyphicon-search"></span></div>
+                       </div>
+                  </div>
+                  <div class="container">
+                      <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
+                          <ul class="nav navbar-nav">
+                              <li><a href="#modalLogin" class="btn" data-toggle="modal">Inicia Sesión</a></li>
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                  <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                                  <ul class="dropdown-menu">
+                                      <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+     </header>
+
+     <!--carrusel-->
+    <section id="slide">
+    <h1 class="titleCategories">Categorías</h1>
+        <div class="container--head sliderHead">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-tooltip">
+                    <div class="caraousel-tooltip-item active" data-index="0"></div>
+                    <div class="caraousel-tooltip-item" data-index="1"></div>
+                    <div class="caraousel-tooltip-item" data-index="2"></div>
+                    <div class="caraousel-tooltip-item" data-index="3"></div>
+                    <div class="caraousel-tooltip-item" data-index="4"></div>
+
                 </div>
                 <a class="navbar-brand" href="#"><img class="smallLogo"src="assets/images/logo2.png"></a>
                 <div class="input-group inputSearch">
