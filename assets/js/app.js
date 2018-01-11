@@ -1,24 +1,22 @@
 $( document ).ready(function() {
 
-  // $('#recommended').hide();
-  // $('#slide').hide();
-  // $('#profileUser').hide();
-  // // $('.userHeader').hide();
-  // $('footer').hide();
-
 
    setTimeout(function() {
       $('#splash').fadeOut(800);
    }, 2500);
 
+   var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
+   //console.log(movieSearch);
+   recomendations(movieRecomendations);
+
 
 });
 
-$('.btn').click(function(){
-    var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
-    //console.log(movieSearch);
-    recomendations(movieRecomendations);
-});
+// $('.btn').click(function(){
+//     var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
+//     //console.log(movieSearch);
+//     recomendations(movieRecomendations);
+// });
 
 function ingreso(){
 
@@ -33,6 +31,7 @@ function ingreso(){
 
 
 };
+
 $('.smallLogo').click(function(){
 
   ingreso();
@@ -159,17 +158,17 @@ function recomendations(apiDAta) {
                             '</div>' +
                             '<div class="col-md-5  col-md-offset-2">' +
                             ' <div class="col-md-12 ">'+
-                            '<p><strong>Año: </strong>' + data.Year + 
+                            '<p><strong>Año: </strong>' + data.Year +
                             '</p>' +
-                            '</div>' + 
+                            '</div>' +
                             '<div class="col-md-12 ">'+
-                             '<p><strong>Premios: </strong>' + data.Awards + 
+                             '<p><strong>Premios: </strong>' + data.Awards +
                               '</p>' +
-                             '</div>' + 
+                             '</div>' +
                               '<div class="col-md-12 ">'+
-                             '<p><strong>Premios: </strong>' + data.Genre + 
+                             '<p><strong>Premios: </strong>' + data.Genre +
                               '</p>' +
-                             '</div>' + 
+                             '</div>' +
                              '<div class="col-md-12 plot ">'+
                               '<p>' + data.Plot+ '</p>' +
                              '</div>' +
@@ -199,12 +198,12 @@ function recomendations(apiDAta) {
                     $('.portfolio-items_one').append(
 
                       '<div class="col-md-3">' +
-                      '<a  data-toggle="modal" data-target="#myModal' + j + '" >' + 
+                      '<a  data-toggle="modal" data-target="#myModal' + j + '" >' +
                       '<div class="bestMovie' + j + '">' +
                        '<img src="' + value.Poster + '" class="img-responsive" alt="Project Title"> </a> </div>' +
                       '</div>' +
                       '</div>'+
-                    '  <br> ' 
+                    '  <br> '
 
                       /*'<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ' + value.Type + ' ">' +
                       '<div class="portfolio-item">' +
@@ -216,7 +215,7 @@ function recomendations(apiDAta) {
                       '<img src="' + value.Poster + '" class="img-responsive" alt="Project Title"> </a> </div>' +
                       ' </div>' +
                       '</div>'*/
-      
+
                     );
 
                 });
