@@ -5,8 +5,7 @@ $( document ).ready(function() {
   // $('#profileUser').hide();
   // // $('.userHeader').hide();
   // $('footer').hide();
-recomendations(movieRecomendations);
-console.log('ready');
+
 
    setTimeout(function() {
       $('#splash').fadeOut(800);
