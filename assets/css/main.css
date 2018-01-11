@@ -295,3 +295,27 @@ footer{
     background-size: cover;
 
 }
+.portfolio-items_one img{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    clear:both;
+    margin-bottom: 1em;
+
+}
+
+.plot{
+    text-align: justify-all;  
+}
+.portfolio-items_one a{
+
+   cursor: pointer;
+}
+
+.paitingBottom{
+    color: #00cdab;
+}
+a:hover, button:hover{
+    text-decoration:none !important; 
+
+}
