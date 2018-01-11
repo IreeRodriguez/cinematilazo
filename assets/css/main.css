@@ -284,3 +284,16 @@ footer{
     border-radius: 100%;
     background-size: cover;
 }
+
+#modal-name, #modal-pic{
+    display: inline-block;
+}
+
+.pic{
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

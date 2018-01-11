@@ -142,7 +142,7 @@ $(function() {
     });
   });
 
-  function socialNet() {
+function movieNet() {
     this.checkSetup();
 
     // DOM elements//
@@ -203,7 +203,7 @@ $(function() {
   }
 
   // inicializar firebase y los productos a usar//
-  socialNet.prototype.initFirebase = function() {
+  movieNet.prototype.initFirebase = function() {
       // productos de firebase//
       this.auth = firebase.auth();
       this.database = firebase.database();
@@ -213,7 +213,7 @@ $(function() {
   };
 
   // cargar mensajes desde la base de datos//
-  socialNet.prototype.loadMessages = function() {
+  movieNet.prototype.loadMessages = function() {
       // /messages/ database path.
       this.messagesRef = this.database.ref('messages');
       // Make sure we remove all previous listeners.
@@ -232,7 +232,7 @@ $(function() {
 
 
   //Guardar mensaje nuevo en firebase//
-  socialNet.prototype.saveMessage = function(e) {
+  movieNet.prototype.saveMessage = function(e) {
     e.preventDefault();
     // chequear por mensaje nuevo y usuario logeado//
     if (this.messageInput.value && this.checkSignedInWithMessage()) {
@@ -245,7 +245,7 @@ $(function() {
          photoUrl: currentUser.photoURL || '/images/profile_placeholder.png'
        }).then(function() {
          // borrar input para que quede vacio//
-         socialNet.resetMaterialTextfield(this.messageInput);
+         movieNet.resetMaterialTextfield(this.messageInput);
          this.toggleButton();
        }.bind(this)).catch(function(error) {
          // console.log('5');
@@ -253,7 +253,7 @@ $(function() {
     }
   };
   //cargar perfil de usuario
-  socialNet.prototype.loadProfile = function(){
+  movieNet.prototype.loadProfile = function(){
       var profRef = this.database.ref('profile');
       var profileBody = document.getElementById('profileBody');
       var modalInfo = document.getElementById('profileInfo');
@@ -305,7 +305,7 @@ $(function() {
 
   };
   //guardar profile en firebase
-  socialNet.prototype.saveProfile = function(e) {
+  movieNet.prototype.saveProfile = function(e) {
       e.preventDefault();
       console.log('funcion saveprofile activated');
 
@@ -332,10 +332,10 @@ $(function() {
 
 
   // Sets URL de la imagen uplodeada con el url de la imagen que ahora esta guardada en firebase storage//
-  socialNet.prototype.setImageUrl = function(imageUri, imgElement) {
+  movieNet.prototype.setImageUrl = function(imageUri, imgElement) {
       // si la imagen esta en firebase su url comenzara con gs:// y rescatamos este url de la base datos.
       if (imageUri.startsWith('gs://')) {
-        imgElement.src = socialNet.LOADING_IMAGE_URL; // imagen de espera mientras carga//
+        imgElement.src = movieNet.LOADING_IMAGE_URL; // imagen de espera mientras carga//
         this.storage.refFromURL(imageUri).getMetadata().then(function(metadata) {
           imgElement.src = metadata.downloadURLs[0];
         });
@@ -346,7 +346,7 @@ $(function() {
 
   // Guardar el nuevo mensaje con la imagen
 
-  socialNet.prototype.saveImageMessage = function(event) {
+  movieNet.prototype.saveImageMessage = function(event) {
     event.preventDefault();
     var file = event.target.files[0];
 
@@ -365,7 +365,7 @@ $(function() {
            var currentUser = this.auth.currentUser;
            this.messagesRef.push({
              name: currentUser.displayName,
-             imageUrl: socialNet.LOADING_IMAGE_URL,
+             imageUrl: movieNet.LOADING_IMAGE_URL,
              photoUrl: currentUser.photoURL || '/images/profile_placeholder.png'
            }).then(function(data) {
 
@@ -382,21 +382,21 @@ $(function() {
   };
 
   // loguarse en la pagina
-  socialNet.prototype.signIn = function() {
+  movieNet.prototype.signIn = function() {
       // se usa cuenta de google para acceder
         var provider = new firebase.auth.GoogleAuthProvider();
         this.auth.signInWithPopup(provider);
   };
 
   // Signs-out de la pagina//
-  socialNet.prototype.signOut = function() {
+  movieNet.prototype.signOut = function() {
       // Sign out de Firebase.//
      this.auth.signOut();
 
   };
 
   // activa eventos cunado hay cambios en el estado de usuario, si esta logeado o no
-  socialNet.prototype.onAuthStateChanged = function(user) {
+  movieNet.prototype.onAuthStateChanged = function(user) {
     if (user) { // si el usuario esta signed in//
       // se toma el su foto de perfil de google y su nombre//
       var profilePicUrl = user.photoURL;
@@ -437,7 +437,7 @@ $(function() {
   };
 
   // retorna true si el usuario esta signed in
-  socialNet.prototype.checkSignedInWithMessage = function() {
+  movieNet.prototype.checkSignedInWithMessage = function() {
 
       if (this.auth.currentUser) {
        return true;
@@ -448,13 +448,13 @@ $(function() {
 
 
   // limpia o borra input de mensajes
-  socialNet.resetMaterialTextfield = function(element) {
+  movieNet.resetMaterialTextfield = function(element) {
     element.value = '';
     element.parentNode.MaterialTextfield.boundUpdateClassesHandler();
   };
 
   // plantilla para los mensajes anadidos//
-  socialNet.MESSAGE_TEMPLATE =
+  movieNet.MESSAGE_TEMPLATE =
       '<div class="message-container">' +
         '<div class="spacing"><div class="pic"></div></div>' +
         '<div class="message"></div>' +
@@ -462,15 +462,15 @@ $(function() {
       '</div>';
 
   //imagen de espera
-  socialNet.LOADING_IMAGE_URL = 'https://www.google.com/images/spin-32.gif';
+  movieNet.LOADING_IMAGE_URL = 'https://www.google.com/images/spin-32.gif';
 
   // mostrar mensajes en la pagina
-  socialNet.prototype.displayMessage = function(key, name, text, picUrl, imageUri) {
+  movieNet.prototype.displayMessage = function(key, name, text, picUrl, imageUri) {
     var div = document.getElementById(key);
 
     if (!div) {
       var container = document.createElement('div');
-      container.innerHTML = socialNet.MESSAGE_TEMPLATE;
+      container.innerHTML = movieNet.MESSAGE_TEMPLATE;
       div = container.firstChild;
       div.setAttribute('id', key);
       this.messageList.appendChild(div);
@@ -496,7 +496,7 @@ $(function() {
   };
 
   //desabilitar y habilitar boton de enviar
-  socialNet.prototype.toggleButton = function() {
+  movieNet.prototype.toggleButton = function() {
     if (this.messageInput.value) {
       this.submitButton.classList.remove('disabled');
     } else {
@@ -505,7 +505,7 @@ $(function() {
   };
 
   // chequear si el sdk de firebase esta correcto
-  socialNet.prototype.checkSetup = function() {
+  movieNet.prototype.checkSetup = function() {
     if (!window.firebase || !(firebase.app instanceof Function) || !firebase.app().options) {
       window.alert('You have not configured and imported the Firebase SDK. ' +
           'Make sure you go through the codelab setup instructions and make ' +
@@ -516,5 +516,5 @@ $(function() {
 
 
   window.onload = function() {
-    window.friendlyChat = new socialNet();
+    window.movieApp = new movieNet();
   };
