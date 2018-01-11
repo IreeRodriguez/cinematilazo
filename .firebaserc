@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "redmusicaliza",
-    "redmusicaliza": "redmusicaliza"
+    "redmusicaliza": "redmusicaliza",
+    "cinematizalo": "cinematizalo"
   }
 }
