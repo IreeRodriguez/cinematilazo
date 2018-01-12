@@ -46,9 +46,10 @@ a, h4{
 }
 
 .smallLogo{
-    width: 230px;
-    margin-top: -0.9em;
-    margin-left: -4em;
+    /* width: 230px; */
+    /* margin-top: -0.9em;
+    margin-left: -4em; */
+    height: 4em;
 }
 
 /*Inicio sin registro*/
@@ -178,9 +179,9 @@ input.transparentInput {
 
 /*nav usuario*/
 .inputSearch{
-    width: 20em;
-    padding-top: 0.5em;
-    margin-left: 30em;
+    min-width: 20em;
+    /* padding-top: 0.5em; */
+    /* margin-left: 30em; */
 }
 
 .searchIcon{
@@ -422,4 +423,8 @@ h5{
     word-wrap:break-word;
     white-space:normal;
     text-align: center;
+}
+
+.middle{
+    padding-top: 1em;
 }

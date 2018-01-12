@@ -9,7 +9,6 @@ $( document ).ready(function() {
    var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
 
    recomendations(movieRecomendations);
-   //window.movieApp = new movieNet();
    new movieNet();
 
 });
@@ -26,7 +25,6 @@ function ingreso(){
   $('footer').show();
   $('#titles').empty();
 
-
 };
 
 $('.smallLogo').click(function(){
@@ -41,18 +39,16 @@ function search(input) {
         $.each(data, function(i,v) {
             // console.log(v);
             if ($.isArray(v)){
-                console.log(v);
+                // console.log(v);
                 $.each(v, function(j,value){
-                    console.log(value.Title);
-
-
+                    // console.log(value.Title);
                     var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
                     getModal(movieModal);
 
                     //Data para obtener el Modal
                     function getModal(movieModal) {
                         $.getJSON(movieModal, function(data){
-                          console.log(data);
+                          // console.log(data);
                           $.each(data, function(i,val) {
                                 //console.log(data.Released);
                              $('#titles').append(
@@ -147,9 +143,9 @@ function recomendations(apiDAta) {
         $.each(data, function(i,v) {
             // console.log(v);
             if ($.isArray(v)){
-                console.log(v);
+                // console.log(v);
                 $.each(v, function(j,value){
-                    console.log(value.Title);
+                    // console.log(value.Title);
 
                     var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
                     getModal(movieModal);
@@ -204,12 +200,9 @@ function recomendations(apiDAta) {
                               '</div><!-- /.modal-content -->' +
                               '</div><!-- /.modal-dialog -->' +
                               '</div><!-- /.modal -->'
-
                           );
-
                         })
                     };
-
 
                     $('.portfolio-items_one').append(
 
@@ -257,7 +250,6 @@ $(function() {
   });
 
 function movieNet() {
-    //this.checkSetup();
 
     // DOM elements//
     this.messageList = document.getElementById('messages');
@@ -274,14 +266,6 @@ function movieNet() {
     this.signInButton = document.getElementById('sign-in');
     this.signOutButton = document.getElementById('sign-out');
     this.feed = document.getElementById('feed');
-    // this.about = document.getElementById('about');
-    // this.info = document.getElementById('inf');
-    //this.instrument = document.getElementById('instrumento');
-    this.genero = document.getElementById('genero');
-    this.age = document.getElementById('age');
-    this.exp = document.getElementById('exp');
-    this.lvlExp = document.getElementById('lvlExp');
-    this.genre = document.getElementById('genre');
     this.save = document.getElementById('save');
     this.account = document.getElementById('account');
 
@@ -381,12 +365,7 @@ function movieNet() {
 
 
                               );
-
-
-
-                              console.log(data.Title);
-
-
+                              // console.log(data.Title);
                           });
                           // console.log("Found match!!");
                       }
@@ -394,7 +373,6 @@ function movieNet() {
               }
           }
       };
-
       profRef.on("value", searchId);
   };
   //guardar profile en firebase
@@ -592,9 +570,3 @@ function movieNet() {
           'sure you are running the codelab using `firebase serve`');
     }
   };
-
-
-
-  // window.onload = function() {
-  //   window.movieApp = new movieNet();
-  // };

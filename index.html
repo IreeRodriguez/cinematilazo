@@ -12,54 +12,48 @@
 </head>
 
 <body>
-
-
   <!--Nav usuario-->
-
-  <header class="userHeader">
+<header class="userHeader">
     <nav class="navbar navbar-inverse no-margin">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <a class="navbar-brand" href="#"><img class="smallLogo" src="assets/images/logo2.png"></a>
-          <div class="input-group inputSearch">
-            <input type="text" class="form-control transparentInput searchInput" id="userTitle" placeholder="Buscar serie o película...">
-
-            <span class="input-group-btn">
-              <button class="btn btn-secondary btnSearch" id="search" type="button"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-
-          </div>
-        </div>
         <div class="container">
-          <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
-            <ul class="nav navbar-nav">
-              <li><button hidden id="sign-in" class="btn btn-default  btn-primary btnNavLogin btnStyle"><span class="glyphicon glyphicon-log-in"></span>  Inicia Sesión
-              </button></li>
-              <li class="dropdown">
-                <a id="user-pic" class="user-pic"></a>
-                <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a id="account" href="#" data-toggle="modal" data-target="#modalProfile"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
-                    <li><a><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
-                    <li><a id="sign-out"><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
+            <div class="navbar-header col-md-9">
+                <img class="navbar-brand img-responsive smallLogo" src="assets/images/logo2.png">
+                <!-- <a class="navbar-brand" href="#"></a> -->
+                <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="input-group inputSearch middle">
+                    <input type="text" class="form-control transparentInput searchInput" id="userTitle" placeholder="Buscar serie o película...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary btnSearch" id="search" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
 
-                  </ul>
-                </li>
-              </ul>
+                </div>
             </div>
-          </div>
+            <div class="container middle">
+                <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
+                    <ul class="nav navbar-nav">
+                        <li><button hidden id="sign-in" class="btn btn-default  btn-primary btnNavLogin btnStyle"><span class="glyphicon glyphicon-log-in"></span>  Inicia Sesión
+                        </button></li>
+                        <li class="dropdown">
+                            <a id="user-pic" class="user-pic"></a>
+                            <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a id="account" href="#" data-toggle="modal" data-target="#modalProfile"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
+                                <li><a><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
+                                <li><a id="sign-out"><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </nav>
-    </header>
+    </nav>
+</header>
 <!--fin nav usuario---------------------->
 
     <div class="modal fullscreen-modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -277,11 +271,11 @@
 
 <!---Splash------------------------------>
 
-      <div id="splash">
+      <!-- <div id="splash">
           <center>
               <img src="assets/images/logoSplash.png" class="camera">
           </center>
-      </div>
+      </div> -->
 
 
         <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
