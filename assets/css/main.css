@@ -295,7 +295,7 @@ footer{
     background-size: cover;
 
 }
-.portfolio-items_one img{
+.portfolio-items_one img , #titles img{
     width: 300px;
     height: 400px;
     overflow: hidden;
@@ -307,7 +307,7 @@ footer{
 .plot{
     text-align: justify-all;  
 }
-.portfolio-items_one a{
+.portfolio-items_one a , , #titles img{
 
    cursor: pointer;
 }
@@ -318,4 +318,7 @@ footer{
 a:hover, button:hover{
     text-decoration:none !important; 
 
+}
+#title{
+    overflow: hidden;
 }

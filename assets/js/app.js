@@ -61,91 +61,7 @@ function search(input) {
                                 //console.log(data.Released);
                              $('#titles').append(
 
-                           '<div  id="myModal' + j + '" role="dialog" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
-                            '<div class="modal-dialog" role="document">' +
-                            '<div class="modal-content">' +
-                            '<div class="modal-header">' +
-                            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                            '<h4 class="modal-title text-uppercase ">' + data.Title + '</h4>' +
-                            '</div>' +
-                            '<div class="modal-body">' +
-                            '<p>' + data.Director + '</p>' +
-                            '<img class="img-fluid " src=" '+data.Poster +'" alt=""> ' +
-                             '<ul class="list-inline">' +
-                            ' <li>Año: ' + data.Year + '</li>' +
-                            ' <li>Premios: ' + data.Awards + '</li>' +
-                            ' <li>Category: ' + data.Genre + '</li>' +
-                            ' </ul>' +
-                            '<p>' + data.Plot+ '</p>' +
-                            '</div>' +
-                            '<div class="modal-footer">' +
-                           ' <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
-                            '<button type="button" class="btn btn-primary">Save changes</button>' +
-                            '</div>' +
-                            '</div><!-- /.modal-content -->' +
-                            '</div><!-- /.modal-dialog -->' +
-                            '</div><!-- /.modal -->'
-
-                                        )
-                           })
-                        })
-                    };
-
-
-                    $('#titles').append(
-
-                  ' <div class="col-md-3">' +
-                  ' <h4><a type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal' + j + '" >'+ value.Title + '</a></h4> ' +
-                  '<div class="bestMovie">' +
-                  '<img src="' + value.Poster + '">' +
-                  '</div></div>'
-                    );
-
-                });
-            };
-        });
-
-    });
-};
-
-$('#search').click(function(){
-    var input = $('#userTitle').val();
-
-    var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
-    //console.log(movieSearch);
-    search(movieSearch);
-    $('#userTitle').val('');
-    $('#titles').empty();
-    $('#recommended').hide();
-    $('#slide').hide();
-    $('#profileUser').hide();
-    $('#splash').hide();
-
-});
-
-function recomendations(apiDAta) {
-
-    $.getJSON(apiDAta, function(data){
-
-        $.each(data, function(i,v) {
-            // console.log(v);
-            if ($.isArray(v)){
-                console.log(v);
-                $.each(v, function(j,value){
-                    console.log(value.Title);
-
-                    var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
-                    getModal(movieModal);
-
-                    //Data para obtener el Modal
-                    function getModal(movieModal) {
-                        $.getJSON(movieModal, function(data){
-                          console.log(data);
-                          $.each(data, function(i,val) {
-                                //console.log(data.Released);
-                             $('#titles').append(
-
-                           '<div  id="myModal' + j + '" role="dialog" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                            '<div  id="myModal' + j + '" role="dialog" class="modal fade"  tabindex="-'+ j + '" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
                             '<div class="modal-dialog" role="document">' +
                             '<div class="modal-content">' +
                             '<div class="modal-header">' +
@@ -196,26 +112,120 @@ function recomendations(apiDAta) {
                     };
 
 
+                    $('#titles').append(
+
+                      '<div class="col-md-3 col-xs-12 col-sm-6">' +
+                      '<a  data-toggle="modal" data-target="#myModal' + j + '" >' +
+                       '<img src="' + value.Poster + '" class="img-responsive" </a> </div>' +
+                      '</div>'+
+                    '  <br> '
+                    );
+
+                });
+            };
+        });
+
+    });
+};
+
+$('#search').click(function(){
+    var input = $('#userTitle').val();
+
+    var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
+    //console.log(movieSearch);
+    search(movieSearch);
+    $('#userTitle').val('');
+    $('#titles').empty();
+    $('#recommended').hide();
+    $('#slide').hide();
+    $('#profileUser').hide();
+    $('#splash').hide();
+
+});
+
+function recomendations(apiDAta) {
+
+    $.getJSON(apiDAta, function(data){
+
+        $.each(data, function(i,v) {
+            // console.log(v);
+            if ($.isArray(v)){
+                console.log(v);
+                $.each(v, function(j,value){
+                    console.log(value.Title);
+
+                    var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
+                    getModal(movieModal);
+
+                    //Data para obtener el Modal
+                    function getModal(movieModal) {
+                        $.getJSON(movieModal, function(data){
+                          console.log(data);
+                          $.each(data, function(i,val) {
+                                //console.log(data.Released);
+                             $('#titles').append(
+
+                           '<div  id="myModal_' + j + '" role="dialog" class="modal fade"  tabindex="-'+ j + '" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                            '<div class="modal-dialog" role="document">' +
+                            '<div class="modal-content">' +
+                            '<div class="modal-header">' +
+                            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+                            '<h4 class="modal-title text-uppercase ">' + data.Title + '</h4>' +
+                            '<p>' + data.Director + '</p>' +
+                            '</div>' +
+                            '<div class="modal-body row">' +
+                            '<div class="col-md-4 ">' +
+                            '<img class="img-fluid " src=" '+data.Poster +'" alt=""> ' +
+                            '</div>' +
+                            '<div class="col-md-5  col-md-offset-2">' +
+                            ' <div class="col-md-12 ">'+
+                            '<p><strong>Año: </strong>' + data.Year +
+                            '</p>' +
+                            '</div>' +
+                            '<div class="col-md-12 ">'+
+                             '<p><strong>Premios: </strong>' + data.Awards +
+                              '</p>' +
+                             '</div>' +
+                              '<div class="col-md-12 ">'+
+                             '<p><strong>Premios: </strong>' + data.Genre +
+                              '</p>' +
+                             '</div>' +
+                             '<div class="col-md-12 plot ">'+
+                              '<p>' + data.Plot+ '</p>' +
+                             '</div>' +
+                             '<div class="col-md-12 plot ">'+
+                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align">' +
+                               '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
+                             '</button>' +
+                              '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
+                              '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Añadir a ver' +
+                             '</button>' +
+                             '</div>' +
+                            '</div>' +
+                             '</div>' +
+                            '<div class="modal-footer">' +
+                           ' <button type="button" class="btn btn-link paitingBottom" data-dismiss="modal">Cerrar</button>' +
+                            '</div>' +
+                            '</div><!-- /.modal-content -->' +
+                            '</div><!-- /.modal-dialog -->' +
+                            '</div><!-- /.modal -->'
+
+                                        );
+                           })
+                        })
+                    };
+
+
                     $('.portfolio-items_one').append(
 
                       '<div class="col-md-3">' +
-                      '<a  data-toggle="modal" data-target="#myModal' + j + '" >' +
+                      '<a  data-toggle="modal" data-target="#myModal_' + j + '" >' +
                       '<div class="bestMovie' + j + '">' +
                        '<img src="' + value.Poster + '" class="img-responsive" alt="Project Title"> </a> </div>' +
                       '</div>' +
                       '</div>'+
                     '  <br> '
 
-                      /*'<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ' + value.Type + ' ">' +
-                      '<div class="portfolio-item">' +
-                      '<div class="">' +
-                       ' <h4><a href="' + value.Poster + '" title="">' + value.Title + '</h4>' +
-                       ' <p>' + value.Year + '</p>' +
-                     ' </div>' +
-                      ' <div><a href="' + value.Poster + '" title="' + value.Title + '">' +
-                      '<img src="' + value.Poster + '" class="img-responsive" alt="Project Title"> </a> </div>' +
-                      ' </div>' +
-                      '</div>'*/
 
                     );
 
