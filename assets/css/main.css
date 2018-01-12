@@ -317,6 +317,7 @@ footer{
 }
 a:hover, button:hover{
     text-decoration:none !important;
+    border-color: white;
 
 }
 #title{
@@ -349,3 +350,6 @@ a:hover, button:hover{
 .display > div{
     margin: 2em;
 }
+.searchIcon:hover{
+    border-color: #00cdaf;
+   }
