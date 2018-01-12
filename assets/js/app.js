@@ -377,21 +377,31 @@ function movieNet() {
   };
   //guardar profile en firebase
    var saveProfile = function(movieID,btn) {
+       console.log(firebase.auth().currentUser);
+       var user = firebase.auth().currentUser;
+
+       if ($(user).length){
+           console.log('funcion saveProfile activated');
+           btn.style.color = 'green';
+           var profileRef = firebase.database().ref('profile');
+           profileRef.off();
+
+           var currentUser = firebase.auth().currentUser;
+           profileRef.push({
+               movieID: movieID,
+               userUid: currentUser.uid,
+           });
+
+       } else {
+           alert('Por favor inicia sesion primero.')
+       }
+
+
 
        //var btn = document.getElementById(btnID);
-       btn.style.color = 'green';
        //console.log(btnID);
 
-      console.log('funcion saveProfile activated');
 
-      var profileRef = firebase.database().ref('profile');
-      profileRef.off();
-
-      var currentUser = firebase.auth().currentUser;
-      profileRef.push({
-          movieID: movieID,
-          userUid: currentUser.uid,
-      });
   };
 
   // Sets URL de la imagen uplodeada con el url de la imagen que ahora esta guardada en firebase storage//
@@ -484,7 +494,7 @@ function movieNet() {
 
       // se cargan los mensajes de la base de datos//
       this.loadMessages();
-      loadProfile();
+      // loadProfile();
 
   } else { // si el usuario esta signed out//
       // se oculta boton de sign out e informacion del usuario y feed, se muentra el boton de sign in
