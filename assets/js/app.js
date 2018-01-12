@@ -20,7 +20,7 @@ function ingreso(){
   $('.userHeader').show();
   $('#recommended').show();
   $('#slide').show();
-  $('#profileUser').show();
+
   $('#userHeader').show();
   $('footer').show();
   $('#titles').empty();
@@ -82,11 +82,11 @@ function search(input) {
                               '<p>' + data.Plot+ '</p>' +
                              '</div>' +
                              '<div class="col-md-12 plot ">'+
-                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;)">' +
-                               '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
+                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;, this)">' +
+                               '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a Mi Librería' +
                              '</button>' +
                               '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
-                              '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Añadir a ver' +
+                              '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Ver más Tarde' +
                              '</button>' +
                              '</div>' +
                             '</div>' +
@@ -131,7 +131,7 @@ $('#search').click(function(){
         $('#titles').empty();
         $('#recommended').hide();
         $('#slide').hide();
-        $('#profileUser').hide();
+
         $('#splash').hide();
     }
 });
@@ -185,11 +185,11 @@ function recomendations(apiDAta) {
                               '<p>' + data.Plot+ '</p>' +
                               '</div>' +
                               '<div class="col-md-12 plot ">'+
-                              '<button type="button" class="btn btn-link btn-lg paitingBottom"  aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;)">' +
-                              '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
+                              '<button type="button" class="btn btn-link btn-lg paitingBottom"  aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;, this)">' +
+                              '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Mi Librería' +
                               '</button>' +
                               '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
-                              '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Añadir a ver' +
+                              '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Ver más Tarde' +
                               '</button>' +
                               '</div>' +
                               '</div>' +
@@ -376,7 +376,12 @@ function movieNet() {
       profRef.on("value", searchId);
   };
   //guardar profile en firebase
-   var saveProfile = function(movieID) {
+   var saveProfile = function(movieID,btn) {
+
+       //var btn = document.getElementById(btnID);
+       btn.style.color = 'green';
+       //console.log(btnID);
+
       console.log('funcion saveProfile activated');
 
       var profileRef = firebase.database().ref('profile');
