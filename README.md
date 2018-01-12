@@ -1,6 +1,5 @@
 # Cinematízalo: tu opinión es nuestra influencia.
-  https://cinematizalo.firebaseapp.com/
-
+  * [Cinematizalo](https://cinematizalo.firebaseapp.com/) - link a web
 Comunidad de Adictos al cine.
 Enfocado a los Usuarios que le encanta el séptimo arte y desean tener un espacio para su crítica y  llevar registro de las películas que ha  visto, asi como tambien tener una recomendación fresca, en tiempo real en base a la opinión de la comunidad activa de cinematízalo.
 
