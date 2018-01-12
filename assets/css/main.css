@@ -199,11 +199,7 @@ input.transparentInput {
     color: #00cdab;
 }
 
-<<<<<<< dc8a987f5b535af9762fba55d29e8ddac96f49ac
 .modal-profile{
-=======
-.modalProfile{
->>>>>>> Linea
     background-color: #1d1d1d;
 }
 
@@ -265,11 +261,9 @@ input.transparentInput {
     border: 5px solid #00cdab;
 }
 
-
 /* .overview{
     background-color: #f3f7f6;
 } */
-
 
 .overview h3 {
     font-weight: 300;
@@ -440,4 +434,13 @@ h5{
 h2{
     text-align: center;
     color: #00cdaf;
+}
+
+.item img{
+    width: 1200px !important;
+
+
+}
+.onTop{
+    object-position: top;
 }
