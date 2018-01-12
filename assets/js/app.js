@@ -1,9 +1,10 @@
 $( document ).ready(function() {
 
+    $(this).scrollTop(0);
 
-   setTimeout(function() {
+    setTimeout(function() {
       $('#splash').fadeOut(800);
-   }, 2500);
+    }, 2500);
 
    var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
    //console.log(movieSearch);
