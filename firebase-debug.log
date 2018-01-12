@@ -39,3 +39,85 @@
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2018-01-12T00:48:01.726Z] ----------------------------------------------------------------------
+[debug] [2018-01-12T00:48:01.728Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-01-12T00:48:01.728Z] CLI Version:   3.16.0
+[debug] [2018-01-12T00:48:01.728Z] Platform:      linux
+[debug] [2018-01-12T00:48:01.728Z] Node Version:  v9.4.0
+[debug] [2018-01-12T00:48:01.728Z] Time:          Thu Jan 11 2018 21:48:01 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:01.728Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-12T00:48:01.775Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-12T00:48:01.775Z] > authorizing via signed-in user
+[debug] [2018-01-12T00:48:01.778Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-12T00:48:01.778Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/S_EXNAD6ifyZ1WHJY4sw0p_18absCB897pusoa00dEE',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jan 11 2018 21:48:01 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:02.222Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T00:48:02.228Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
+  
+ Thu Jan 11 2018 21:48:02 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:03.533Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T00:48:03.535Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
+  
+ Thu Jan 11 2018 21:48:03 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:05.268Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/laboratoria/cinematizalo'...
+[info] 
+[debug] [2018-01-12T00:48:05.273Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
+  
+ Thu Jan 11 2018 21:48:05 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:06.325Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T00:48:06.331Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
+  
+ Thu Jan 11 2018 21:48:06 GMT-0300 (CLST)
+[debug] [2018-01-12T00:48:06.907Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-01-12T11:47:47.266Z] ----------------------------------------------------------------------
+[debug] [2018-01-12T11:47:47.268Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-01-12T11:47:47.268Z] CLI Version:   3.16.0
+[debug] [2018-01-12T11:47:47.268Z] Platform:      linux
+[debug] [2018-01-12T11:47:47.268Z] Node Version:  v9.4.0
+[debug] [2018-01-12T11:47:47.268Z] Time:          Fri Jan 12 2018 08:47:47 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:47.268Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-12T11:47:47.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-12T11:47:47.312Z] > authorizing via signed-in user
+[debug] [2018-01-12T11:47:47.314Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-12T11:47:47.314Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/S_EXNAD6ifyZ1WHJY4sw0p_18absCB897pusoa00dEE',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jan 12 2018 08:47:47 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:47.800Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:47:47.862Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
+  
+ Fri Jan 12 2018 08:47:47 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:49.085Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:47:49.087Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
+  
+ Fri Jan 12 2018 08:47:49 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:50.032Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/laboratoria/cinematizalo'...
+[info] 
+[debug] [2018-01-12T11:47:50.034Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
+  
+ Fri Jan 12 2018 08:47:50 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:51.213Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:47:51.217Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
+  
+ Fri Jan 12 2018 08:47:51 GMT-0300 (CLST)
+[debug] [2018-01-12T11:47:52.191Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+
