@@ -305,7 +305,7 @@ footer{
 }
 
 .plot{
-    text-align: justify-all;  
+    text-align: justify-all;
 }
 .portfolio-items_one a , , #titles img{
 
@@ -316,9 +316,36 @@ footer{
     color: #00cdab;
 }
 a:hover, button:hover{
-    text-decoration:none !important; 
+    text-decoration:none !important;
 
 }
 #title{
     overflow: hidden;
+}
+
+.name {
+    color: #00cdab;
+    font-size: 0.9em;
+}
+.message-container{
+    border-bottom: 0.1em solid #00cdab;
+    margin-bottom: 0.9em;
+}
+.img-responsive{
+    max-width: 11em;
+    max-height: 16em ;
+    object-fit: cover !important;
+}
+.img-fluid{
+
+    object-fit: cover !important;
+}
+
+.display{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.display > div{
+    margin: 2em;
 }

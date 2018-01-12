@@ -16,53 +16,44 @@
 
   <!--Nav usuario------->
   <header class="userHeader">
-    <div class="row">
-      <div class="col-md-12">
-        <nav class="navbar navbar-inverse no-margin">
-          <div class="container">
-            <div class="navbar-header">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <div class="row">
-                <div class="col-md-12 col-xs-offset-2">
-                  <a class="navbar-brand" href="#"><img class="smallLogo"src="assets/images/logo2.png"></a>
-                </div>
-              </div>
-
-              <div class="input-group inputSearch">
-                <input type="text" class="form-control transparentInput searchInput" id="userTitle" placeholder="Buscar serie o película...">
-                <div class="input-group-addon searchIcon"><span id="search"  class="glyphicon glyphicon-search"></span></div>
-              </div>
-            </div>
-            <div class="container">
-              <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
-                <ul class="nav navbar-nav">
-                  <li><button hidden id="sign-in" class="btn btn-default  btn-primary"><span class="glyphicon glyphicon-log-in"></span>Inicia Sesión
-                  </button></li>
-                  <li class="dropdown">
-                    <a id="user-pic" class="user-pic"></a>
-                    <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
-                        <li class="divider"></li>
-                        <li><button hidden id="sign-out" class="btn btn-default hide btn-primary">Sign-out
-                        </button></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
+    <nav class="navbar navbar-inverse no-margin">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed btn-hamburger" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <a class="navbar-brand" href="#"><img class="smallLogo"src="assets/images/logo2.png"></a>
+          <div class="input-group inputSearch">
+            <input type="text" class="form-control transparentInput searchInput" id="userTitle" placeholder="Buscar serie o película...">
+            <div class="input-group-addon searchIcon"><span id="search"  class="glyphicon glyphicon-search"></span></div>
+          </div>
         </div>
-      </div>
+        <div class="container">
+          <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
+            <ul class="nav navbar-nav">
+              <li><button hidden id="sign-in" class="btn btn-default  btn-primary"><span class="glyphicon glyphicon-log-in"></span>Inicia Sesión
+              </button></li>
+              <li class="dropdown">
+                <a id="user-pic" class="user-pic"></a>
+                <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+                    <li class="divider"></li>
+                    <li><button hidden id="sign-out" class="btn btn-default hide btn-primary">Sign-out
+                    </button></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="modal fullscreen-modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -205,65 +196,11 @@
 
             </div>
             <div class="row">
+                <div class="portfolio-items_one display col-md-12 container-fluid">
 
 
-                <!-- <div class="col-xs-12 hidden-md hidden-lg" >
-                    <h1>En <span class="logo">CINEMATÍZALO</span></h1>
-                    <h1 class="mobilRecommended">Te Recomendamos <span class="glyphicon glyphicon-film" aria-hidden="true"></span></h1>
-                </div> -->
-
-                <div class="portfolio-items_one"></div>
-                <!-- <div class="col-md-3">
-                    <h4>Pulp Fiction</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/pulp.jpg">
-                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h4>Fear & Loathing in las Vegas</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/fear.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Trainspoting</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/trains.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Gato Negro, Gato Blanco</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/cat.jpg">
-                    </div>
-                </div> -->
             </div>
-            <!-- <div class="row">
-                <div class="col-md-3">
-                    <h4>El Viaje de Chihiro</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/chihiro.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>El Club de la Pelea</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/figth.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Las Trillizas de BelleVille</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/trillizas.jpg">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Kill Bill</h4>
-                    <div class="bestMovie">
-                        <img src="assets/images/kill.jpg">
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -273,9 +210,7 @@
           <div class="row">
              <hr>
 
-              <div id="titles">
-                <div class="clearfix"></div>
-
+              <div id="titles" class="display col-md-12 container-fluid">
               </div>
           </div>
       </div>

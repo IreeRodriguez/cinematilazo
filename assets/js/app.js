@@ -7,17 +7,11 @@ $( document ).ready(function() {
     }, 2500);
 
    var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
-   //console.log(movieSearch);
+
    recomendations(movieRecomendations);
 
 
 });
-
-// $('.btn').click(function(){
-//     var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
-//     //console.log(movieSearch);
-//     recomendations(movieRecomendations);
-// });
 
 function ingreso(){
 
@@ -29,6 +23,7 @@ function ingreso(){
   $('#profileUser').show();
   $('#userHeader').show();
   $('footer').show();
+  $('#titles').empty();
 
 
 };
@@ -114,7 +109,7 @@ function search(input) {
 
                     $('#titles').append(
 
-                      '<div class="col-md-3 col-xs-12 col-sm-6">' +
+                      '<div class="">' +
                       '<a  data-toggle="modal" data-target="#myModal' + j + '" >' +
                        '<img src="' + value.Poster + '" class="img-responsive" </a> </div>' +
                       '</div>'+
@@ -161,64 +156,62 @@ function recomendations(apiDAta) {
                     function getModal(movieModal) {
                         $.getJSON(movieModal, function(data){
                           console.log(data);
-                          $.each(data, function(i,val) {
-                                //console.log(data.Released);
-                             $('#titles').append(
+                          $('.portfolio-items_one').append(
 
-                           '<div  id="myModal_' + j + '" role="dialog" class="modal fade"  tabindex="-'+ j + '" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
-                            '<div class="modal-dialog" role="document">' +
-                            '<div class="modal-content">' +
-                            '<div class="modal-header">' +
-                            '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                            '<h4 class="modal-title text-uppercase ">' + data.Title + '</h4>' +
-                            '<p>' + data.Director + '</p>' +
-                            '</div>' +
-                            '<div class="modal-body row">' +
-                            '<div class="col-md-4 ">' +
-                            '<img class="img-fluid " src=" '+data.Poster +'" alt=""> ' +
-                            '</div>' +
-                            '<div class="col-md-5  col-md-offset-2">' +
-                            ' <div class="col-md-12 ">'+
-                            '<p><strong>Año: </strong>' + data.Year +
-                            '</p>' +
-                            '</div>' +
-                            '<div class="col-md-12 ">'+
-                             '<p><strong>Premios: </strong>' + data.Awards +
+                              '<div  id="myModal_' + j + '" role="dialog" class="modal fade"  tabindex="-'+ j + '" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                              '<div class="modal-dialog" role="document">' +
+                              '<div class="modal-content">' +
+                              '<div class="modal-header">' +
+                              '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+                              '<h4 class="modal-title text-uppercase ">' + data.Title + '</h4>' +
+                              '<p>' + data.Director + '</p>' +
+                              '</div>' +
+                              '<div class="modal-body row">' +
+                              '<div class="col-md-4 ">' +
+                              '<img class="img-fluid " src=" '+data.Poster +'" alt=""> ' +
+                              '</div>' +
+                              '<div class="col-md-5  col-md-offset-2">' +
+                              ' <div class="col-md-12 ">'+
+                              '<p><strong>Año: </strong>' + data.Year +
                               '</p>' +
-                             '</div>' +
+                              '</div>' +
                               '<div class="col-md-12 ">'+
-                             '<p><strong>Premios: </strong>' + data.Genre +
+                              '<p><strong>Premios: </strong>' + data.Awards +
                               '</p>' +
-                             '</div>' +
-                             '<div class="col-md-12 plot ">'+
+                              '</div>' +
+                              '<div class="col-md-12 ">'+
+                              '<p><strong>Premios: </strong>' + data.Genre +
+                              '</p>' +
+                              '</div>' +
+                              '<div class="col-md-12 plot ">'+
                               '<p>' + data.Plot+ '</p>' +
-                             '</div>' +
-                             '<div class="col-md-12 plot ">'+
-                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align">' +
-                               '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
-                             '</button>' +
+                              '</div>' +
+                              '<div class="col-md-12 plot ">'+
+                              '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align">' +
+                              '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
+                              '</button>' +
                               '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
                               '<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Añadir a ver' +
-                             '</button>' +
-                             '</div>' +
-                            '</div>' +
-                             '</div>' +
-                            '<div class="modal-footer">' +
-                           ' <button type="button" class="btn btn-link paitingBottom" data-dismiss="modal">Cerrar</button>' +
-                            '</div>' +
-                            '</div><!-- /.modal-content -->' +
-                            '</div><!-- /.modal-dialog -->' +
-                            '</div><!-- /.modal -->'
+                              '</button>' +
+                              '</div>' +
+                              '</div>' +
+                              '</div>' +
+                              '<div class="modal-footer">' +
+                              ' <button type="button" class="btn btn-link paitingBottom" data-dismiss="modal">Cerrar</button>' +
+                              '</div>' +
+                              '</div><!-- /.modal-content -->' +
+                              '</div><!-- /.modal-dialog -->' +
+                              '</div><!-- /.modal -->'
 
-                                        );
-                           })
+                          );
+
                         })
                     };
 
 
                     $('.portfolio-items_one').append(
 
-                      '<div class="col-md-3">' +
+                      '<div class="">' +
                       '<a  data-toggle="modal" data-target="#myModal_' + j + '" >' +
                       '<div class="bestMovie' + j + '">' +
                        '<img src="' + value.Poster + '" class="img-responsive" alt="Project Title"> </a> </div>' +
@@ -290,16 +283,6 @@ function movieNet() {
     this.save = document.getElementById('save');
 
     this.userUid = 0;
-
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     this.userUid = user.uid;
-    //   }
-    // });
-
-
-
-
 
 
     // Guardar mensajes del input al presionar submit//
