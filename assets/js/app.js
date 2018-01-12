@@ -6,7 +6,7 @@ $( document ).ready(function() {
       $('#splash').fadeOut(800);
     }, 2500);
 
-   var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
+   var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=of%20a&y=2017';
 
    recomendations(movieRecomendations);
    new movieNet();
