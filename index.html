@@ -43,7 +43,7 @@
                 <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+                    <li><a id="account" href="#" data-toggle="modal" data-target="#modalProfile"><i class="fa fa-cog"></i> Account</a></li>
                     <li class="divider"></li>
                     <li><button hidden id="sign-out" class="btn btn-default hide btn-primary">Sign-out
                     </button></li>
@@ -62,7 +62,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h1 class="modal-title" id="myModalLabel">Mi Perfil</h1>
-                    <div id="modal-pic" class="pic"></div>
+                    <!-- <div id="modal-pic" class="pic"></div> -->
                     <h2 id="modal-name"></h2>
                 </div>
                 <div id="profileBody" class="modal-body">
@@ -88,8 +88,8 @@
                             <div class="col-lg-12 user-details">
                                 <div class="row coralbg whiteText">
                                     <div class="col-lg-6 no-pad">
-                                        <div class="user-image">
-                                            <img src="assets/images/userimage.png" class="imageProfile">
+                                        <div id="modal-pic" class="user-image imageProfile">
+                                            <!-- <img src="assets/images/userimage.png" class="imageProfile"> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 no-pad">
@@ -120,6 +120,9 @@
                         </div>
                     </div>
 
+                    <div id="movieProfile" class="display">
+
+                    </div>
 
                 </div>
                 <div class="modal-footer">

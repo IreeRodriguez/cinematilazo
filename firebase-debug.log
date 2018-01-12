@@ -1,146 +1,41 @@
-[debug] [2018-01-12T01:33:35.401Z] ----------------------------------------------------------------------
-[debug] [2018-01-12T01:33:35.401Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-12T01:33:35.401Z] CLI Version:   3.16.0
-[debug] [2018-01-12T01:33:35.401Z] Platform:      win32
-[debug] [2018-01-12T01:33:35.401Z] Node Version:  v8.9.3
-[debug] [2018-01-12T01:33:35.401Z] Time:          Thu Jan 11 2018 22:33:35 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:35.401Z] ----------------------------------------------------------------------
+[debug] [2018-01-12T11:28:05.727Z] ----------------------------------------------------------------------
+[debug] [2018-01-12T11:28:05.727Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-12T11:28:05.727Z] CLI Version:   3.16.0
+[debug] [2018-01-12T11:28:05.727Z] Platform:      win32
+[debug] [2018-01-12T11:28:05.727Z] Node Version:  v8.9.3
+[debug] [2018-01-12T11:28:05.727Z] Time:          Fri Jan 12 2018 08:28:05 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:05.727Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-01-12T01:33:35.417Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-12T01:33:35.417Z] > authorizing via signed-in user
-[debug] [2018-01-12T01:33:35.417Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-01-12T01:33:35.417Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-01-12T11:28:05.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-12T11:28:05.743Z] > authorizing via signed-in user
+[debug] [2018-01-12T11:28:05.743Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-12T11:28:05.743Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/q1wHppLrx7d1IIV-tDV3go2RyJzRKUyjnl3bz4RJe0AhWHBvwoW-E_7lmHy-7PnT',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu Jan 11 2018 22:33:35 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:35.904Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T01:33:35.935Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
+ Fri Jan 12 2018 08:28:05 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:06.250Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:28:06.266Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
   
- Thu Jan 11 2018 22:33:35 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:36.794Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T01:33:36.794Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
+ Fri Jan 12 2018 08:28:06 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:06.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:28:06.985Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
   
- Thu Jan 11 2018 22:33:36 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:37.438Z] <<< HTTP RESPONSE 200
+ Fri Jan 12 2018 08:28:06 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:07.635Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\Users\Ire\Desktop\original\cinematizalo'...
+[info] === Serving from 'C:\Users\Ire\Desktop\cinema prueba\cinematizalo'...
 [info] 
-[debug] [2018-01-12T01:33:37.438Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
+[debug] [2018-01-12T11:28:07.642Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
   
- Thu Jan 11 2018 22:33:37 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:38.334Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T01:33:38.334Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
+ Fri Jan 12 2018 08:28:07 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:08.544Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T11:28:08.544Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
   
- Thu Jan 11 2018 22:33:38 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T01:33:39.368Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: ./
-[info] +  hosting: Local server: http://localhost:5000
-
-[debug] [2018-01-12T02:40:29.852Z] ----------------------------------------------------------------------
-[debug] [2018-01-12T02:40:29.852Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-12T02:40:29.852Z] CLI Version:   3.16.0
-[debug] [2018-01-12T02:40:29.852Z] Platform:      win32
-[debug] [2018-01-12T02:40:29.852Z] Node Version:  v8.9.3
-[debug] [2018-01-12T02:40:29.852Z] Time:          Thu Jan 11 2018 23:40:29 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:40:29.852Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-01-12T02:40:29.867Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-12T02:40:29.867Z] > authorizing via signed-in user
-[debug] [2018-01-12T02:40:29.867Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
-  
- Thu Jan 11 2018 23:40:29 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:40:30.934Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T02:40:30.934Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
-  
- Thu Jan 11 2018 23:40:30 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:40:31.575Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\Ire\Desktop\pol\cinematizalo'...
-[info] 
-[debug] [2018-01-12T02:40:31.590Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
-  
- Thu Jan 11 2018 23:40:31 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:40:32.513Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T02:40:32.513Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
-  
- Thu Jan 11 2018 23:40:32 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:40:32.934Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: ./
-[info] +  hosting: Local server: http://localhost:5000
-
-[debug] [2018-01-12T02:42:50.294Z] ----------------------------------------------------------------------
-[debug] [2018-01-12T02:42:50.294Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-12T02:42:50.294Z] CLI Version:   3.16.0
-[debug] [2018-01-12T02:42:50.294Z] Platform:      win32
-[debug] [2018-01-12T02:42:50.294Z] Node Version:  v8.9.3
-[debug] [2018-01-12T02:42:50.294Z] Time:          Thu Jan 11 2018 23:42:50 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:42:50.294Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-01-12T02:42:50.310Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-12T02:42:50.310Z] > authorizing via signed-in user
-[debug] [2018-01-12T02:42:50.310Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
-  
- Thu Jan 11 2018 23:42:50 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:42:51.638Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T02:42:51.638Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
-  
- Thu Jan 11 2018 23:42:51 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:42:52.248Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\Ire\Desktop\cinema prueba'...
-[info] 
-[debug] [2018-01-12T02:42:52.263Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
-  
- Thu Jan 11 2018 23:42:52 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:42:53.155Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T02:42:53.155Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
-  
- Thu Jan 11 2018 23:42:53 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T02:42:54.233Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: ./
-[info] +  hosting: Local server: http://localhost:5000
-
-[debug] [2018-01-12T05:02:36.888Z] ----------------------------------------------------------------------
-[debug] [2018-01-12T05:02:36.888Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-01-12T05:02:36.888Z] CLI Version:   3.16.0
-[debug] [2018-01-12T05:02:36.888Z] Platform:      win32
-[debug] [2018-01-12T05:02:36.888Z] Node Version:  v8.9.3
-[debug] [2018-01-12T05:02:36.888Z] Time:          Fri Jan 12 2018 02:02:36 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:36.888Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-01-12T05:02:36.904Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-01-12T05:02:36.904Z] > authorizing via signed-in user
-[debug] [2018-01-12T05:02:36.904Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-01-12T05:02:36.904Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/q1wHppLrx7d1IIV-tDV3go2RyJzRKUyjnl3bz4RJe0AhWHBvwoW-E_7lmHy-7PnT',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Fri Jan 12 2018 02:02:36 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:37.404Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T05:02:37.419Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
-  
- Fri Jan 12 2018 02:02:37 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:38.404Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T05:02:38.404Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
-  
- Fri Jan 12 2018 02:02:38 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:39.123Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from 'C:\Users\Ire\Desktop\original\cinematizalo'...
-[info] 
-[debug] [2018-01-12T05:02:39.123Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
-  
- Fri Jan 12 2018 02:02:39 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:40.045Z] <<< HTTP RESPONSE 200
-[debug] [2018-01-12T05:02:40.045Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
-  
- Fri Jan 12 2018 02:02:40 GMT-0300 (Pacific SA Daylight Time)
-[debug] [2018-01-12T05:02:41.232Z] <<< HTTP RESPONSE 200
+ Fri Jan 12 2018 08:28:08 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T11:28:09.690Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 

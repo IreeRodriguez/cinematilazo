@@ -125,19 +125,19 @@ function search(input) {
 };
 
 $('#search').click(function(){
-  $(".results").removeClass('hide');
     var input = $('#userTitle').val();
 
-    var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
-    //console.log(movieSearch);
-    search(movieSearch);
-    $('#userTitle').val('');
-    $('#titles').empty();
-    $('#recommended').hide();
-    $('#slide').hide();
-    $('#profileUser').hide();
-    $('#splash').hide();
-
+    if(input!==""){
+        var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
+        //console.log(movieSearch);
+        search(movieSearch);
+        $('#userTitle').val('');
+        $('#titles').empty();
+        $('#recommended').hide();
+        $('#slide').hide();
+        $('#profileUser').hide();
+        $('#splash').hide();
+    }
 });
 
 function recomendations(apiDAta) {
@@ -283,6 +283,7 @@ function movieNet() {
     this.lvlExp = document.getElementById('lvlExp');
     this.genre = document.getElementById('genre');
     this.save = document.getElementById('save');
+    this.account = document.getElementById('account');
 
     this.userUid = 0;
 
@@ -290,8 +291,7 @@ function movieNet() {
     this.messageForm.addEventListener('submit', saveMessage.bind(this));
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInButton.addEventListener('click', this.signIn.bind(this));
-    this.userName.addEventListener('click', loadProfile.bind(this));
-
+    this.account.addEventListener('click', loadProfile.bind(this));
 
     // subir una imagen en el feed//
     this.submitImageButton.addEventListener('click', function(e) {
@@ -366,7 +366,29 @@ function movieNet() {
               if (obj.hasOwnProperty(key)) {
                   if (currentUser) {
                       if (currentUser.uid === obj[key].userUid) {
-                          console.log("Found match!!");
+
+                          $('#movieProfile').empty();
+                          var movieData = 'http://www.omdbapi.com/?apikey=3a181f1c&i=' + obj[key].movieID;
+                          // console.log(movieData);
+
+                          $.getJSON(movieData, function(data){
+
+                              $('#movieProfile').append(
+                                  '<div class="display-col">' +
+                                  '<h5>' + data.Title + '</h5>' +
+                                   '<img src="' + data.Poster + '" class="img-responsive"' +
+                                  '</div>'
+
+
+                              );
+
+
+
+                              console.log(data.Title);
+
+
+                          });
+                          // console.log("Found match!!");
                       }
                   }
               }

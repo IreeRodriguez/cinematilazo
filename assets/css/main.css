@@ -347,9 +347,27 @@ a:hover, button:hover{
     flex-flow: row wrap;
     justify-content: space-around;
 }
+.display-col{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 10em;
+}
 .display > div{
     margin: 2em;
 }
 .searchIcon:hover{
     border-color: #00cdaf;
-   }
+}
+#modal-pic{
+    width: 10em;
+    height: 10em;
+    background-size: cover;
+}
+
+h5{
+    color: #00cdaf;
+    word-wrap:break-word;
+    white-space:normal;
+    text-align: center;
+}
