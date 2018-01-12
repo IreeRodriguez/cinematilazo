@@ -291,14 +291,8 @@ function movieNet() {
     this.messageForm.addEventListener('submit', saveMessage.bind(this));
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInButton.addEventListener('click', this.signIn.bind(this));
-<<<<<<< 1ecf465c6511abb6cec2b97e4ef438fa7699193b
     this.account.addEventListener('click', loadProfile.bind(this));
 
-=======
-    this.save.addEventListener('click', this.saveProfile.bind(this));
-
-    this.userName.addEventListener('click', this.loadProfile.bind(this));
->>>>>>> Splash fijo, modificación carrusel,menú y input search
     // subir una imagen en el feed//
     this.submitImageButton.addEventListener('click', function(e) {
       e.preventDefault();

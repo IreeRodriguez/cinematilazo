@@ -41,18 +41,16 @@
         <div class="container">
           <div id="navbar" class="navbar-collapse collapse  navbar-right nav-top">
             <ul class="nav navbar-nav">
-              <li><button hidden id="sign-in" class="btn btn-default  btn-primary btnNavLogin bottomLogin btnStyle"><span class="glyphicon glyphicon-log-in"></span>  Inicia Sesión
+              <li><button hidden id="sign-in" class="btn btn-default  btn-primary btnNavLogin btnStyle"><span class="glyphicon glyphicon-log-in"></span>  Inicia Sesión
               </button></li>
               <li class="dropdown">
                 <a id="user-pic" class="user-pic"></a>
                 <a id="user-name" href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#modalProfile" class="btn" data-toggle="modal"><i class="glyphicon glyphicon-user"></i>  Perfil</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
-                    <li id="sign-out"><a href="#"><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
-                <!--<li class="divider"></li>
-                    <li><button hidden id="sign-out" class="btn btn-default hide btn-primary btnNavLogin  btnOut btnStyle">Salir</button></li>-->
+                  <img src="assets/images/userimage.png" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a id="account" href="#" data-toggle="modal" data-target="#modalProfile"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
+                    <li><a><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
+                    <li><a id="sign-out"><i class="glyphicon glyphicon-log-out"></i> Salir</a></li>
 
                   </ul>
                 </li>
@@ -78,7 +76,7 @@
                     <div id="modal-submit" class="modal-footer">
                         <!-- <button id="save" type="submit" class="btn btn-primary" class="close" data-dismiss="modal">Guardar</button> -->
 
-                    
+
                     </div>
                 </div>
             </div>
@@ -278,6 +276,7 @@
 
 
 <!---Splash------------------------------>
+
       <div id="splash">
           <center>
               <img src="assets/images/logoSplash.png" class="camera">
@@ -285,10 +284,7 @@
       </div>
 
 
-
-
-
-        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js">   </script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
         <script src="/__/firebase/init.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
