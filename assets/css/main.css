@@ -180,8 +180,8 @@ input.transparentInput {
 /*nav usuario*/
 .inputSearch{
     min-width: 20em;
-    /* padding-top: 0.5em; */
-    /* margin-left: 30em; */
+    margin-top: 0.5em;
+    margin-left: 24em;
 }
 
 .searchIcon{
@@ -200,7 +200,7 @@ input.transparentInput {
 }
 
 .modal-content{
-    background-color: #1d1d1d !important;
+    background-color: #1d1d1d;
 }
 
 .userProfile{
@@ -434,5 +434,4 @@ h5{
 h2{
     text-align: center;
     color: #00cdaf;
-
 }
