@@ -285,3 +285,35 @@
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2018-01-12T18:14:26.468Z] ----------------------------------------------------------------------
+[debug] [2018-01-12T18:14:26.468Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ire\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-12T18:14:26.468Z] CLI Version:   3.16.0
+[debug] [2018-01-12T18:14:26.468Z] Platform:      win32
+[debug] [2018-01-12T18:14:26.468Z] Node Version:  v8.9.3
+[debug] [2018-01-12T18:14:26.468Z] Time:          Fri Jan 12 2018 15:14:26 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T18:14:26.468Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-12T18:14:26.484Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-12T18:14:26.484Z] > authorizing via signed-in user
+[debug] [2018-01-12T18:14:26.484Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cinematizalo  
+  
+ Fri Jan 12 2018 15:14:26 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T18:14:27.625Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T18:14:27.625Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cinematizalo/tokens  
+  
+ Fri Jan 12 2018 15:14:27 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T18:14:28.479Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Ire\Desktop\original\cinematizalo'...
+[info] 
+[debug] [2018-01-12T18:14:28.495Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/cinematizalo  
+  
+ Fri Jan 12 2018 15:14:28 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T18:14:29.552Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-12T18:14:29.568Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/479197871140/clients/_:getWebAppConfig  
+  
+ Fri Jan 12 2018 15:14:29 GMT-0300 (Pacific SA Daylight Time)
+[debug] [2018-01-12T18:14:30.776Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+

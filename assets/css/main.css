@@ -445,3 +445,6 @@ h2{
 .onTop{
     object-position: top;
 }
+.modal-header p{
+    text-align: center;
+}
