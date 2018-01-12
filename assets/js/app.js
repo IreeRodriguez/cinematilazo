@@ -9,7 +9,8 @@ $( document ).ready(function() {
    var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=the%20a&y=2017';
 
    recomendations(movieRecomendations);
-
+   //window.movieApp = new movieNet();
+   new movieNet();
 
 });
 
@@ -85,7 +86,7 @@ function search(input) {
                               '<p>' + data.Plot+ '</p>' +
                              '</div>' +
                              '<div class="col-md-12 plot ">'+
-                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align">' +
+                             '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;)">' +
                                '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
                              '</button>' +
                               '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
@@ -155,7 +156,7 @@ function recomendations(apiDAta) {
                     //Data para obtener el Modal
                     function getModal(movieModal) {
                         $.getJSON(movieModal, function(data){
-                          console.log(data);
+                          // console.log(data);
                           $('.portfolio-items_one').append(
 
                               '<div  id="myModal_' + j + '" role="dialog" class="modal fade"  tabindex="-'+ j + '" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
@@ -187,7 +188,7 @@ function recomendations(apiDAta) {
                               '<p>' + data.Plot+ '</p>' +
                               '</div>' +
                               '<div class="col-md-12 plot ">'+
-                              '<button type="button" class="btn btn-link btn-lg paitingBottom  " aria-label="Left Align">' +
+                              '<button type="button" class="btn btn-link btn-lg paitingBottom"  aria-label="Left Align" onclick="saveProfile(&quot;' + data.imdbID + '&quot;)">' +
                               '<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir a vistas' +
                               '</button>' +
                               '<button type="button" class="btn btn-link btn-lg paitingBottom " aria-label="Left Align">' +
@@ -255,7 +256,7 @@ $(function() {
   });
 
 function movieNet() {
-    this.checkSetup();
+    //this.checkSetup();
 
     // DOM elements//
     this.messageList = document.getElementById('messages');
@@ -274,7 +275,7 @@ function movieNet() {
     this.feed = document.getElementById('feed');
     // this.about = document.getElementById('about');
     // this.info = document.getElementById('inf');
-    this.instrument = document.getElementById('instrumento');
+    //this.instrument = document.getElementById('instrumento');
     this.genero = document.getElementById('genero');
     this.age = document.getElementById('age');
     this.exp = document.getElementById('exp');
@@ -284,14 +285,11 @@ function movieNet() {
 
     this.userUid = 0;
 
-
     // Guardar mensajes del input al presionar submit//
-    this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
+    this.messageForm.addEventListener('submit', saveMessage.bind(this));
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInButton.addEventListener('click', this.signIn.bind(this));
-    this.save.addEventListener('click', this.saveProfile.bind(this));
-
-    this.userName.addEventListener('click', this.loadProfile.bind(this));
+    this.userName.addEventListener('click', loadProfile.bind(this));
 
 
     // subir una imagen en el feed//
@@ -302,7 +300,7 @@ function movieNet() {
     this.mediaCapture.addEventListener('change', this.saveImageMessage.bind(this));
 
     this.initFirebase();
-  }
+}
 
   // inicializar firebase y los productos a usar//
   movieNet.prototype.initFirebase = function() {
@@ -334,8 +332,9 @@ function movieNet() {
 
 
   //Guardar mensaje nuevo en firebase//
-  movieNet.prototype.saveMessage = function(e) {
+  var saveMessage = function(e) {
     e.preventDefault();
+
     // chequear por mensaje nuevo y usuario logeado//
     if (this.messageInput.value && this.checkSignedInWithMessage()) {
 
@@ -355,83 +354,39 @@ function movieNet() {
     }
   };
   //cargar perfil de usuario
-  movieNet.prototype.loadProfile = function(){
-      var profRef = this.database.ref('profile');
-      var profileBody = document.getElementById('profileBody');
-      var modalInfo = document.getElementById('profileInfo');
-      var modalSubmit = document.getElementById('modal-submit');
-      var profileClose = document.getElementById('profileClose');
-      var profileGenero = document.getElementById('profileGenero');
-      var profileInst = document.getElementById('profileInst');
-      var profileAge = document.getElementById('profileAge');
-      var profileExp = document.getElementById('profileExp');
-      var profileLvlExp = document.getElementById('profileLvlExp');
-      var profileGenre = document.getElementById('profileGenre');
+  var loadProfile = function(){
+      var profRef = firebase.database().ref('profile');
+      var currentUser = firebase.auth().currentUser;
 
-          var searchId = function(snapshot) {
+      var searchId = function(snapshot) {
           var obj = snapshot.val();
 
           for (key in obj) {
               if (obj.hasOwnProperty(key)) {
-
-                  if (this.checkSignedInWithMessage()) {
-
-                      if (this.userUid === obj[key].userid) {
-
-                          modalInfo.classList.add('hide');
-                          modalSubmit.classList.add('hide');
-                          profileBody.classList.remove('hide');
-                          profileClose.classList.remove('hide');
-                          profileGenero.innerHTML = obj[key].genero;
-                          profileAge.innerHTML = obj[key].age;
-                          profileInst.innerHTML = obj[key].instrument;
-                          profileExp.innerHTML = obj[key].exp;
-                          profileLvlExp.innerHTML = obj[key].lvlExp;
-                          profileGenre.innerHTML = obj[key].genre;
+                  if (currentUser) {
+                      if (currentUser.uid === obj[key].userUid) {
                           console.log("Found match!!");
-                          return true;
-                      } else {
-                          console.log('boo');
-                          profileBody.classList.add('hide');
-                          profileClose.classList.add('hide');
-                          modalSubmit.classList.remove('hide');
-                          modalInfo.classList.remove('hide');
                       }
-                      }
-
+                  }
               }
           }
-      }.bind(this);
+      };
 
       profRef.on("value", searchId);
-
   };
   //guardar profile en firebase
-  movieNet.prototype.saveProfile = function(e) {
-      e.preventDefault();
-      console.log('funcion saveprofile activated');
+   var saveProfile = function(movieID) {
+      console.log('funcion saveProfile activated');
 
-      this.profileRef = this.database.ref('profile');
+      var profileRef = firebase.database().ref('profile');
+      profileRef.off();
 
-      this.profileRef.off();
-
-      var currentUser = this.auth.currentUser;
-      console.log(this.instrument.value);
-        console.log(this.userUid);
-
-      this.profileRef.push({
-          name: currentUser.displayName,
-          genero: this.genero.value,
-          age: this.age.value,
-          instrument: this.instrument.value,
-          exp: this.exp.value,
-          lvlExp: this.lvlExp.value,
-          genre: this.genre.value,
-          userid : this.userUid,
+      var currentUser = firebase.auth().currentUser;
+      profileRef.push({
+          movieID: movieID,
+          userUid: currentUser.uid,
       });
   };
-
-
 
   // Sets URL de la imagen uplodeada con el url de la imagen que ahora esta guardada en firebase storage//
   movieNet.prototype.setImageUrl = function(imageUri, imgElement) {
@@ -523,7 +478,7 @@ function movieNet() {
 
       // se cargan los mensajes de la base de datos//
       this.loadMessages();
-      this.loadProfile();
+      loadProfile();
 
   } else { // si el usuario esta signed out//
       // se oculta boton de sign out e informacion del usuario y feed, se muentra el boton de sign in
@@ -617,6 +572,6 @@ function movieNet() {
 
 
 
-  window.onload = function() {
-    window.movieApp = new movieNet();
-  };
+  // window.onload = function() {
+  //   window.movieApp = new movieNet();
+  // };
