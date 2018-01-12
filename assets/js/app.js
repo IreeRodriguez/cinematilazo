@@ -125,6 +125,7 @@ function search(input) {
 };
 
 $('#search').click(function(){
+  $(".results").removeClass('hide');
     var input = $('#userTitle').val();
 
     var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
