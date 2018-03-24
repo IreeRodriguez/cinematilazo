@@ -6,7 +6,7 @@ $( document ).ready(function() {
       $('#splash').fadeOut(800);
     }, 2500);
 
-   var movieRecomendations = 'http://www.omdbapi.com/?apikey=3a181f1c&s=of%20a&y=2017';
+   var movieRecomendations = 'https://www.omdbapi.com/?apikey=7c019c37&s=of%20a&y=2017';
 
    recomendations(movieRecomendations);
    new movieNet();
@@ -42,7 +42,7 @@ function search(input) {
                 // console.log(v);
                 $.each(v, function(j,value){
                     // console.log(value.Title);
-                    var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
+                    var movieModal = 'https://www.omdbapi.com/?apikey=7c019c37&t=' + value.Title ;
                     getModal(movieModal);
 
                     //Data para obtener el Modal
@@ -124,7 +124,7 @@ $('#search').click(function(){
     var input = $('#userTitle').val();
 
     if(input!==""){
-        var movieSearch = 'http://www.omdbapi.com/?apikey=3a181f1c&s=' + input;
+        var movieSearch = 'https://www.omdbapi.com/?apikey=7c019c37&s=' + input;
         //console.log(movieSearch);
         search(movieSearch);
         $('#userTitle').val('');
@@ -147,7 +147,7 @@ function recomendations(apiDAta) {
                 $.each(v, function(j,value){
                     // console.log(value.Title);
 
-                    var movieModal = 'http://www.omdbapi.com/?apikey=3a181f1c&t=' + value.Title ;
+                    var movieModal = 'https://www.omdbapi.com/?apikey=7c019c37&t=' + value.Title ;
                     getModal(movieModal);
 
                     //Data para obtener el Modal
@@ -352,7 +352,7 @@ function movieNet() {
                       if (currentUser.uid === obj[key].userUid) {
 
                           $('#movieProfile').empty();
-                          var movieData = 'http://www.omdbapi.com/?apikey=3a181f1c&i=' + obj[key].movieID;
+                          var movieData = 'https://www.omdbapi.com/?apikey=7c019c37&i=' + obj[key].movieID;
                           // console.log(movieData);
 
                           $.getJSON(movieData, function(data){
